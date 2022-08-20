@@ -1,0 +1,21 @@
+{
+    "2408760494": {
+        "title": "1-к. квартира, 40 м², 4/5 эт.",
+        "city": "Тула",
+        "price": "3338192",
+        "price_sq": "83455",
+        "area": "40 м²",
+        "area_kitchen": "11 м²",
+        "area_live": "19.3 м²",
+        "commission": "Застройщик",
+        "floor": "4",
+        "floors_count": "5",
+        "house_type": "Кирпичный",
+        "nazvanie_obekta_nedvizhimosti": "ЖК «Новая Тула»",
+        "ofitsialnyy_zastroyshchik": "ООО «СЗ «ТРИ ЭС НОВАЯ ТУЛА»",
+        "otdelka": "Без отделки",
+        "rooms": "1",
+        "status": "Квартира",
+        "type": "Новостройка"
+    }
+}
