@@ -1,0 +1,124 @@
+2022-09-27T16:46:26.598597+0300 ERROR An error has been caught in function '<module>', process 'MainProcess' (6794), thread 'MainThread' (4666848768):
+Traceback (most recent call last):
+
+> File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 248, in <module>
+    start_parse()
+    └ <function start_parse at 0x7f783d4474c0>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 39, in start_parse
+    adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
+              │          │   │             │   └ <Options.OP_NO_TLSv1_1: 268435456>
+              │          │   │             └ <module 'ssl' from '/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/ssl.py'>
+              │          │   └ <Options.OP_NO_TLSv1: 67108864>
+              │          └ <module 'ssl' from '/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/ssl.py'>
+              └ <class '__main__.TlsAdapter'>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 21, in __init__
+    super(TlsAdapter, self).__init__(**kwargs)
+          │           │                └ {}
+          │           └ <__main__.TlsAdapter object at 0x7f783d428d00>
+          └ <class '__main__.TlsAdapter'>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/venv/lib/python3.8/site-packages/requests/adapters.py", line 156, in __init__
+    self.init_poolmanager(pool_connections, pool_maxsize, block=pool_block)
+    │    │                │                 │                   └ False
+    │    │                │                 └ 10
+    │    │                └ 10
+    │    └ <function TlsAdapter.init_poolmanager at 0x7f783d1640d0>
+    └ <__main__.TlsAdapter object at 0x7f783d428d00>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 24, in init_poolmanager
+    ctx = ssl_.create_urllib3_context(ciphers=CIPHERS, cert_reqs=ssl.CERT_REQUIRED, options=self.ssl_options)
+          │    │                                                 │   │                      │    └ <Options.OP_NO_TLSv1_1|OP_NO_TLSv1: 335544320>
+          │    │                                                 │   │                      └ <__main__.TlsAdapter object at 0x7f783d428d00>
+          │    │                                                 │   └ <VerifyMode.CERT_REQUIRED: 2>
+          │    │                                                 └ <module 'ssl' from '/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/ssl.py'>
+          │    └ <function create_urllib3_context at 0x7f783bc01d30>
+          └ <module 'urllib3.util.ssl_' from '/Users/psamodurov13/PycharmProjects/avito/venv/lib/python3.8/site-packages/urllib3/util/ssl...
+
+NameError: name 'CIPHERS' is not defined
+2022-09-28T00:30:05.754333+0300 ERROR An error has been caught in function '<module>', process 'MainProcess' (13311), thread 'MainThread' (4580115968):
+Traceback (most recent call last):
+
+> File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 258, in <module>
+    start_parse()
+    └ <function start_parse at 0x7f9353c384c0>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 47, in start_parse
+    soup_a = bs(a, features='html_parser')
+             │  └ '<!DOCTYPE html>\n<html lang="ru">\n<head>\n    <link rel="canonical" href="https://2ip.ru/">\n\n    <meta name="viewport" co...
+             └ <class 'bs4.BeautifulSoup'>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/venv/lib/python3.8/site-packages/bs4/__init__.py", line 248, in __init__
+    raise FeatureNotFound(
+          └ <class 'bs4.FeatureNotFound'>
+
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: html_parser. Do you need to install a parser library?
+2022-09-28T00:31:29.639481+0300 ERROR An error has been caught in function '<module>', process 'MainProcess' (13335), thread 'MainThread' (4521186816):
+Traceback (most recent call last):
+
+> File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 258, in <module>
+    start_parse()
+    └ <function start_parse at 0x7fba054394c0>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 47, in start_parse
+    soup_a = bs(a, features='html_parser')
+             │  └ <Response [200]>
+             └ <class 'bs4.BeautifulSoup'>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/venv/lib/python3.8/site-packages/bs4/__init__.py", line 248, in __init__
+    raise FeatureNotFound(
+          └ <class 'bs4.FeatureNotFound'>
+
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: html_parser. Do you need to install a parser library?
+2022-09-28T00:31:57.021689+0300 ERROR An error has been caught in function '<module>', process 'MainProcess' (13348), thread 'MainThread' (4522845696):
+Traceback (most recent call last):
+
+> File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 258, in <module>
+    start_parse()
+    └ <function start_parse at 0x7fc75744d4c0>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 47, in start_parse
+    soup_a = bs(a.text, features='html_parser')
+             │  │ └ <property object at 0x7fc756fa7cc0>
+             │  └ <Response [200]>
+             └ <class 'bs4.BeautifulSoup'>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/venv/lib/python3.8/site-packages/bs4/__init__.py", line 248, in __init__
+    raise FeatureNotFound(
+          └ <class 'bs4.FeatureNotFound'>
+
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: html_parser. Do you need to install a parser library?
+2022-09-28T13:21:38.662782+0300 ERROR An error has been caught in function '<module>', process 'MainProcess' (7157), thread 'MainThread' (4711716352):
+Traceback (most recent call last):
+
+> File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 274, in <module>
+    start_parse()
+    └ <function start_parse at 0x7fb240436310>
+
+  File "/Users/psamodurov13/PycharmProjects/avito/main.py", line 150, in start_parse
+    r_json = json.loads(replacer(r_j.text))
+             │    │     │        │   └ <property object at 0x7fb23e781b80>
+             │    │     │        └ <Response [421]>
+             │    │     └ <function replacer at 0x7fb23b8b9280>
+             │    └ <function loads at 0x7fb23e0e9940>
+             └ <module 'json' from '/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py'>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+           │                │      └ '<html>\r\n<head><title>421 Misdirected Request</title></head>\r\n<body>\r\n<center><h1>421 Misdirected Request</h1></center>...
+           │                └ <function JSONDecoder.decode at 0x7fb23e0e9280>
+           └ <json.decoder.JSONDecoder object at 0x7fb23e0e7190>
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               │    │          │      │  └ '<html>\r\n<head><title>421 Misdirected Request</title></head>\r\n<body>\r\n<center><h1>421 Misdirected Request</h1></center>...
+               │    │          │      └ <built-in method match of re.Pattern object at 0x7fb23e06bf30>
+               │    │          └ '<html>\r\n<head><title>421 Misdirected Request</title></head>\r\n<body>\r\n<center><h1>421 Misdirected Request</h1></center>...
+               │    └ <function JSONDecoder.raw_decode at 0x7fb23e0e9310>
+               └ <json.decoder.JSONDecoder object at 0x7fb23e0e7190>
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+          │                                  └ '<html>\r\n<head><title>421 Misdirected Request</title></head>\r\n<body>\r\n<center><h1>421 Misdirected Request</h1></center>...
+          └ <class 'json.decoder.JSONDecodeError'>
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
